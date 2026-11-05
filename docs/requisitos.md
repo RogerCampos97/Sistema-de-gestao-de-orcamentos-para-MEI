@@ -45,5 +45,9 @@ O propósito é criar um sistema simples, fácil de usar, e sem custos extras pa
 | RNF01 | Usabilidade | A interface deve permitir criar um orçamento com facilidade | Alta | - |
 | RNF02 | Segurança | Permitir cadastro de senha para acesso ao sistema  | Baixa | - |
 | RNF03 | Desempenho | Buscas de clientes/orçamentos devem retornar em menos de 2 segundos | Alta | - |
+| RNF04 | Manutenibilidade | Código organizado em camadas (MVC) com responsabilidades separadas | Alta | - |
+| RNF05 | Persistência | Dados armazenados em banco de dados para não serem perdidos ao encerrar o sistema | Alta | - |
+| RNF06 | Segurança | Os dados devem ser armazenados com segurança seguindo a LGPD | Alta | RF01, RF03 |
+
 
 
