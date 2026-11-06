@@ -1,4 +1,5 @@
 # Documento de Especificação de Requisitos
+
 | | |
 | --- | --- |
 | Projeto / Sistema: | Sistema de gerenciamento de orçamentos para MEIs |
@@ -8,6 +9,7 @@
 | Versão: | 1.0 |
 
 ## 1. Introdução
+
 ### 1.1 Sobre este documento
 
 Este documento tem como objetivo organizar os requisitos funcionais e não funcionais do programa para servir de referência para as proximas etapas do projeto.
@@ -20,34 +22,33 @@ Os MEIs (Micro empreendedores individuais) já contam com várias alternativas p
 
 O propósito é criar um sistema simples, fácil de usar, e sem custos extras para que os Micro empreendedores tenham uma forma mais simples e rápida, sem preçisar pagar por funções básicas, para gerar orçamentos para entregar para os seus clientes, e também uma plataforma para salvar os dados desses mesmos clientes.
 
-## Requisitos Funcionais
+## 2. Requisitos Funcionais
 
 | ID | Requisito | Descrição | Prioridade | Depende de |
 | --- | --- | --- | --- | --- |
-| RF01 | Cadastrar o MEI | Registrar Cnpj, nome fantasia, endereço e telefone | Alta | - |
-| RF02 | Cadastrar o empreendedor | Registrar nome, telefone etc. | Média | - |
-| RF03 | Cadastrar Clientes | Registrar nome, telefone, endereço | Alta | - |
-| RF04 | Permitir a criação de orçamentos | Registrar data, endereço (caso seja diferente do da casa do cliente), valor do serviço e descrição caso haja | Alta | RF01, RF03 |
-| RF05 | Cadastrar lista de serviços | Descrição individual, no orçamento de cada serviço a ser realizado com preço individual | Alta | RF04 |
-| RF06 | Gerar orçamento | Gerar documento em PDF e/ou formato similar para impressão / compartilhamento | Alta | RF05 |
+| RF01 | Cadastrar o MEI | O sistema deve registrar Cnpj, nome fantasia, endereço e telefone | Alta | - |
+| RF02 | Cadastrar o empreendedor | O sistema deve registrar nome, telefone etc. | Média | - |
+| RF03 | Cadastrar Clientes | O sistema deve registrar nome, telefone, endereço | Alta | - |
+| RF04 | Permitir a criação de orçamentos | O sistema deve registrar data, endereço (caso seja diferente do da casa do cliente), valor do serviço e descrição caso haja | Alta | RF01, RF03 |
+| RF05 | Cadastrar lista de serviços no orçamento | Cada serviço do orçamento deve conter descrição individual do serviço realizado e preço individual | Alta | RF04 |
+| RF06 | Gerar orçamento | O sistema deve gerar documento em PDF e/ou formato similar para impressão / compartilhamento com o preço totalizado | Alta | RF05 |
 | RF07 | Exibir lista de clientes cadastrados | Mostrar lista de clientes | Média | RF03 |
-| RF08 | Permitir buscar clientes | Ter função de busca para o empreendedor poder buscas em caso de necessidade | Média | RF07 |
-| RF09 | Salvar dados de Fornecedores | Registrar nome, telefone etc. de fornecedores de materiais / serviços | Baixa | - |
-| RF10 | Emitir recibos | Registrar valores recebidos por um orçamento ou valores recebidos sem nenhum orçamento e gerar recibos em PDF ou formato similar | Média | RF06 |
-| RF11 | Permitir controle de recebimentos | Ter tela para controle financeiro do empreendedor | Baixa | RF10 |
-| RF12 | Permitir listar materiais no orçamento | Permitir a listagem de custos referentes a materiais de um orçamento, com possibilidade de anexar comprovantes  | Baixa | RF06 |
----
+| RF08 | Permitir buscar clientes | O sistema deve ter função de busca para o empreendedor poder buscar clientes em caso de necessidade | Média | RF07 |
+| RF09 | Salvar dados de Fornecedores | O sistema deve registrar nome, telefone etc. de fornecedores de materiais / serviços | Baixa | - |
+| RF10 | Emitir recibos | O sistema deve poder registrar valores recebidos por um orçamento e gerar um comprovante do recebimento de valores | Média | RF06 |
+| RF11 | Permitir controle de recebimentos | o sistema deve ter tela para controle financeiro do empreendedor | Baixa | RF10 |
+| RF12 | Permitir listar materiais no orçamento | O sistema deve permitir a listagem de custos referentes a materiais de um orçamento, com possibilidade de anexar comprovantes | Baixa | RF06 |
 
-## Requisitos Não Funcionais
+------
+
+## 3. Requisitos Não Funcionais
 
 | ID | Categoria | Descrição | Prioridade | Depende de |
-| --- | --- | --- | ---| --- |
+| --- | --- | --- | --- | --- |
 | RNF01 | Usabilidade | A interface deve permitir criar um orçamento com facilidade | Alta | - |
-| RNF02 | Segurança | Permitir cadastro de senha para acesso ao sistema  | Baixa | - |
-| RNF03 | Desempenho | Buscas de clientes/orçamentos devem retornar em menos de 2 segundos | Alta | - |
-| RNF04 | Manutenibilidade | Código organizado em camadas (MVC) com responsabilidades separadas | Alta | - |
-| RNF05 | Persistência | Dados armazenados em banco de dados para não serem perdidos ao encerrar o sistema | Alta | - |
-| RNF06 | Segurança | Os dados devem ser armazenados com segurança seguindo a LGPD | Alta | RF01, RF03 |
+| RNF02 | Segurança | O sistema deve permitir cadastro de senha para acesso ao sistema | Baixa | - |
+| RNF03 | Desempenho | A realização de buscas de clientes/orçamentos devem retornar em menos de 2 segundos | Alta | - |
+| RNF04 | Manutenibilidade | O Código deve ser organizado em camadas (MVC) com responsabilidades separadas | Alta | - |
+| RNF05 | Persistência | Os dados devem ser armazenados em banco de dados para não serem perdidos ao encerrar o sistema | Alta | - |
 
-
-
+## Clique [aqui](regras_de_negocio.md) para visualizar as Regras de negócio e os Requisitos Suplementares
