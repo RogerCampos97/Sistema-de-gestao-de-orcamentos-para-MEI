@@ -1,9 +1,11 @@
-# Especificação de Caso de Uso
+# Documento de especificação de Casos de Uso
 
 
-### Caso de uso
+## Caso de uso 01
+- Caso de uso: 
 
 ### Ator principal
+
 
 ### Atores secundários
 
@@ -11,11 +13,14 @@
 
 ### Pré-condições
 
+
 ### Pós-condições
 
-## FLUXO PRINCIPAL
 
-## FLUXOS ALTERNATIVOS
+### FLUXO PRINCIPAL
+- FLUXO PRINCIPAL: 
+
+### FLUXOS ALTERNATIVOS
 - FA01 —
 - FA02 —
 - FA03 —

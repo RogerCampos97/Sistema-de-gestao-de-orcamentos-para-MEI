@@ -11,3 +11,5 @@ A ideia do sistema é que seja posssivel um empreendedor poder gerar orçamentos
 
  - [Requisitos funcionais e não funcionais](docs\requisitos.md)
  - [Regras de negócio e Requisitos Suplementares](docs\regras_de_negocio.md)
+ - [diagrama de casos de uso](docs\casos_de_uso.md)
+ 
