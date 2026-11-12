@@ -5,7 +5,7 @@
 | Projeto / Sistema: | Sistema de gerenciamento de orçamentos para MEIs |
 | Cliente / Solicitante: | APS - Análise e projeto de sistema |
 | Responsável(is): | Róger Campos |
-| Data:| 05/11/26 |
+| Data: | 05/11/26 |
 | Versão: | 1.0 |
 
 ## 1. Introdução
