@@ -1,7 +1,6 @@
 
 # Diagrama de Casos de uso
 
-
 | | |
 | --- | --- |
 | Projeto / Sistema: | Sistema de gerenciamento de orçamentos para MEIs |
@@ -12,61 +11,49 @@
 
 ## 1. Sobre este documento
 
-Este documento tem como objetivo organizar os casos de uso do sistema que serão detalhados posteriormente.
+Este documento tem como objetivo organizar os casos de uso do sistema que serão detalhados no documento de [especificações de casos de uso](docs/especificacoes_casos_de_uso.md).
 
 ## 2. Diagrama de casos de uso
 
 ```mermaid
-    usecase-beta
+
+usecase-beta
     %% atores
-    actor cliente
-    actor empreendedor
-    %% actor bd ("SGBD")
+    actor cliente ("Cliente")
+    actor empreendedor ("Empreendedor")
 
     systemBoundary "Sistema MEI"
 
-    solicitar_orcamento ("solicitar orçamento")
-    emitir_orcamento ("emitir orçamento")
     cadastrar_empresa ("cadastrar empresa")
-
-    manter_clientes ("manter clientes ")
-    salvar_cliente ("salvar cliente")
-    buscar_clientes ("buscar clientes")
-
-    manter_servicos ("manter serviços")
-    manter_materiais ("manter materiais")
-    
-    manter_fornecedores ("manter fornecedores")
-
+    manter_clientes ("manter clientes")
+    manter_catalogo ("manter catálogo")
+    gerenciar_orcamento ("gerenciar orçamento")
     emitir_recibos ("emitir recibos")
-    manter_recebimentos ("manter recebimentos")
-    realizar_pagamento ("realizar pagamento")
+
     end
 
     %% cliente
-    cliente -- solicitar_orcamento
-    cliente -- realizar_pagamento
+    cliente -- gerenciar_orcamento
+    %% cliente está interessado em receber o orçamento
+
+    cliente -- emitir_recibos
+    %% cliente está interessado em receber o recibo
 
     %% empreendedor
-    empreendedor -- emitir_recibos
-    emitir_orcamento -- empreendedor
-    empreendedor -- salvar_cliente
     empreendedor -- cadastrar_empresa
-    empreendedor -- buscar_clientes
+    empreendedor -- manter_clientes
+    empreendedor -- manter_catalogo
+    empreendedor -- gerenciar_orcamento 
+    empreendedor -- emitir_recibos
 
-    %% sgbd
+    %% Include
+    gerenciar_orcamento ..> :include manter_clientes
+    %% obrigatório um orçamento ser relacionado a um cliente
 
-    %% Include e extend
-    realizar_pagamento ..> : include emitir_recibos
-    emitir_recibos ..> : include manter_recebimentos
-    emitir_orcamento ..> : include manter_clientes
-    salvar_cliente ..> : include manter_clientes
+    manter_catalogo ..> :extend gerenciar_orcamento 
+    %% opcional manter o catálogo, um serviço pode ser feito sem ser adicionado ao catálogo, mesmo vale para um produto
 
-    manter_materiais ..> : extend emitir_orcamento
-    emitir_orcamento ..> : extend solicitar_orcamento
-    buscar_clientes ..> : extend emitir_orcamento
-    emitir_orcamento ..> : extend manter_fornecedores
-    emitir_orcamento ..> : extend manter_clientes
-    emitir_orcamento ..> : extend manter_recebimentos
-    emitir_orcamento ..> : extend manter_servicos
+    emitir_recibos ..> :include manter_clientes
+    %% obrigatório um recibo ser relacionado a um cliente
+
 ```

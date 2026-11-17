@@ -4,6 +4,8 @@ Este documento contém as especificaçoes dos casos de uso do diagrama de casos 
 
 ## Caso de uso 01
 
+    UC-01 — Marcar Consulta
+    
 ### Ator principal
 
 ### Atores secundários
