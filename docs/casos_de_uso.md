@@ -26,7 +26,7 @@ usecase-beta
 
     cadastrar_empresa ("cadastrar empresa")
     manter_clientes ("manter clientes")
-    manter_catalogo ("manter catálogo")
+    manter_catalogo ("manter catálogos")
     gerenciar_orcamento ("gerenciar orçamento")
     emitir_recibos ("emitir recibos")
 
